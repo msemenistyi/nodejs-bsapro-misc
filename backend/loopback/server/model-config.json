@@ -14,7 +14,7 @@
     ]
   },
   "user": {
-    "dataSource": null,
+    "dataSource": "mongo",
     "public": true
   }
 }

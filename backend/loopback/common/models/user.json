@@ -13,12 +13,9 @@
     "surname": {
       "type": "string",
       "required": true
-    },
-    "_id": {
-      "type": "objectId",
-      "required": true
     }
   },
+  "plural": "user",
   "validations": [],
   "relations": {},
   "acls": [],
