@@ -7,8 +7,26 @@
 
 module.exports = {
 
-  attributes: {
+	attributes: {
+		name: {
+			type: 'string'
+		},
 
-  }
+		surname: {
+			type: 'string'
+		},
+
+		getUserId: function(){
+			return this.id;
+		},
+
+		toJSON: function(){
+			const user = this.toObject();
+			user._id = this.getUserId();
+			return user;
+		}
+	},
+
+	tableName: 'users'
 };
 

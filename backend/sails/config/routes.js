@@ -34,7 +34,8 @@ module.exports.routes = {
 
   '/': {
     view: 'users'
-  }
+  },
+  '/api/allUsers': 'UserController.find'
 
   /***************************************************************************
   *                                                                          *

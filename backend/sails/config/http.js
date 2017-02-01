@@ -9,6 +9,8 @@
  * http://sailsjs.org/#/documentation/reference/sails.config/sails.config.http.html
  */
 
+const express = require('express');
+
 module.exports.http = {
 
   /****************************************************************************
@@ -21,7 +23,7 @@ module.exports.http = {
   *                                                                           *
   ****************************************************************************/
 
-  // middleware: {
+  middleware: {
 
   /***************************************************************************
   *                                                                          *
@@ -30,29 +32,33 @@ module.exports.http = {
   *                                                                          *
   ***************************************************************************/
 
-    // order: [
+    order: [
     //   'startRequestTimer',
     //   'cookieParser',
     //   'session',
     //   'myRequestLogger',
-    //   'bodyParser',
+      'bodyParser',
     //   'handleBodyParserError',
     //   'compress',
     //   'methodOverride',
     //   'poweredBy',
     //   '$custom',
-    //   'router',
+      'router',
     //   'www',
     //   'favicon',
-    //   '404',
-    //   '500'
-    // ],
+      'public_static',
+      '404',
+      '500'
+    ],
+
+    public_static: express.static(__dirname + '/../../../public')
 
   /****************************************************************************
   *                                                                           *
   * Example custom middleware; logs each request to the console.              *
   *                                                                           *
   ****************************************************************************/
+
 
     // myRequestLogger: function (req, res, next) {
     //     console.log("Requested :: ", req.method, req.url);
@@ -71,7 +77,7 @@ module.exports.http = {
 
     // bodyParser: require('skipper')
 
-  // },
+  },
 
   /***************************************************************************
   *                                                                          *
