@@ -7,5 +7,15 @@
 
 module.exports = {
 	
+	findUsersNamedEdik: function(req, res, next) {
+		UserService.findUsersNamedEdik()
+			.then((ediks) => {
+				res.send(ediks)
+			})
+			.catch(() => {
+				res.sendStatus(400);
+			});
+	}
+
 };
 

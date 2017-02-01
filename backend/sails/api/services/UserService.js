@@ -1,7 +1,9 @@
 module.exports = {
 
-	getUserFullName: function(user){
-		return user.name + user.surname;
+	findUsersNamedEdik: () => {
+		return User.find({
+			name: 'edik'
+		});
 	}
 
 };

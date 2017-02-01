@@ -35,7 +35,8 @@ module.exports.routes = {
   '/': {
     view: 'users'
   },
-  '/api/allUsers': 'UserController.find'
+  '/api/allUsers': 'UserController.find',
+  '/api/edik': 'UserController.findUsersNamedEdik'
 
   /***************************************************************************
   *                                                                          *

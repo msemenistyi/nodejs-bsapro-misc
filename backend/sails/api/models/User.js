@@ -16,11 +16,11 @@ module.exports = {
 			type: 'string'
 		},
 
-		getUserId: function(){
+		getUserId: function() {
 			return this.id;
 		},
 
-		toJSON: function(){
+		toJSON: function() {
 			const user = this.toObject();
 			user._id = this.getUserId();
 			return user;
